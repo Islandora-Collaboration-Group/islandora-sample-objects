@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mods:mods xmlns:mods="http://www.loc.gov/mods/v3" xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" version="3.5" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-5.xsd">
+  <mods:titleInfo>
+    <mods:title>Cox 18</mods:title>
+  </mods:titleInfo>
+  <mods:name type="personal">
+    <mods:namePart>Fox, Bill</mods:namePart>
+    <mods:role>
+      <mods:roleTerm type="text" authority="marcrelator">Photographer</mods:roleTerm>
+    </mods:role>
+  </mods:name>
+  <mods:typeOfResource>still image</mods:typeOfResource>
+  <mods:genre>35mm Slide</mods:genre>
+  <mods:physicalDescription>
+    <mods:reformattingQuality>preservation</mods:reformattingQuality>
+    <mods:internetMediaType>tiff</mods:internetMediaType>
+    <mods:digitalOrigin>digitized other analog</mods:digitalOrigin>
+  </mods:physicalDescription>
+  <mods:abstract>Sand waves. Image is 200m horizontal.</mods:abstract>
+  <mods:subject>
+    <mods:topic>Sedimentology</mods:topic>
+    <mods:topic>Sand Waves</mods:topic>
+    <mods:topic>Dunes</mods:topic>
+    <mods:geographic>North America</mods:geographic>
+    <mods:geographic>Saskatchewan</mods:geographic>
+    <mods:geographic>William River</mods:geographic>
+  </mods:subject>
+  <mods:identifier type="doi">Large_Image_01</mods:identifier>
+  <mods:accessCondition type="restrictions on access">Contact Archives and Special Collections at archives@williams.edu</mods:accessCondition>
+  <mods:recordInfo>
+    <mods:recordContentSource>Anna Leonard</mods:recordContentSource>
+    <mods:languageOfCataloging>
+      <mods:languageTerm type="code" authority="iso639-3">eng</mods:languageTerm>
+    </mods:languageOfCataloging>
+    <mods:descriptionStandard>DACS</mods:descriptionStandard>
+  </mods:recordInfo>
+</mods:mods>

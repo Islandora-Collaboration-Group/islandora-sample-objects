@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mods:mods xmlns:mods="http://www.loc.gov/mods/v3" xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" version="3.5" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-5.xsd">
+  <mods:titleInfo>
+    <mods:title>Correspondence calling for Black Student Leadership Conference May 30, 1969 in Harlem</mods:title>
+  </mods:titleInfo>
+  <mods:name type="corporate">
+    <mods:namePart>Student Leadership Conference c/o Blackfrica Productions</mods:namePart>
+    <mods:role>
+      <mods:roleTerm type="text" authority="marcrelator">Creator</mods:roleTerm>
+    </mods:role>
+  </mods:name>
+  <mods:typeOfResource>text</mods:typeOfResource>
+  <mods:originInfo>
+    <mods:dateIssued encoding="w3cdtf" keyDate="yes">1969</mods:dateIssued>
+  </mods:originInfo>
+  <mods:language>
+    <mods:languageTerm type="code" authority="iso639-3">eng</mods:languageTerm>
+  </mods:language>
+  <mods:physicalDescription>
+    <mods:reformattingQuality>access</mods:reformattingQuality>
+    <mods:internetMediaType>PDF</mods:internetMediaType>
+    <mods:digitalOrigin>digitized other analog</mods:digitalOrigin>
+  </mods:physicalDescription>
+  <mods:abstract>Letter to the Williams College Afro-American Society requesting their participation the May 30 1969 Student Leadership Conference in Harlem (New York, New York). The letter is signed by the conferences sponsors: National CORE, Cornell Black Liberation Front, Black Mind, Blackfrica Productions, East Wind, City College (coalition), Columbia (SAS), Queens College (coalition).</mods:abstract>
+  <mods:identifier type="collection">MC 218</mods:identifier>
+  <mods:identifier type="filename">PDF_02</mods:identifier>
+  <mods:accessCondition type="restrictions on access">Contact Archives and Special Collections at archives@williams.edu</mods:accessCondition>
+  <mods:recordInfo>
+    <mods:languageOfCataloging>
+      <mods:languageTerm type="code" authority="iso639-3">eng</mods:languageTerm>
+    </mods:languageOfCataloging>
+  </mods:recordInfo>
+</mods:mods>

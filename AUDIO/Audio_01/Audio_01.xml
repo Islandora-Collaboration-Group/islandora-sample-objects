@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" version="3.5" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-5.xsd">
+  <titleInfo>
+    <title>500 Miles High</title>
+  </titleInfo>
+  <name type="corporate">
+    <namePart>Music</namePart>
+    <role>Collector</role>
+    <role>
+      <roleTerm authority="marcrelator" type="text">Department</roleTerm>
+    </role>
+  </name>
+  <typeOfResource>sound recording musical</typeOfResource>
+  <genre>Music</genre>
+  <language>eng</language>
+  <abstract>Audio Recording of "500 Miles High"</abstract>
+  <identifier type="collection">Audio_01.mp3</identifier>
+  <physicalDescription>
+    <form authority="marccategory">sound_recording</form>
+    <reformattingQuality>access</reformattingQuality>
+    <internetMediaType>tiff</internetMediaType>
+    <digitalOrigin>digitized other analog</digitalOrigin>
+  </physicalDescription>
+  <accessCondition type="restrictions on access">Contact Archives and Special Collections at archives@williams.edu</accessCondition>
+  <subject>
+    <mods:topic>Jazz</mods:topic>
+    <mods:topic>Performance</mods:topic>
+    <mods:topic>Music--Performance</mods:topic>
+  </subject>
+  <relatedItem type="host">
+    <mods:titleInfo>Williams Archives and Special Collections</mods:titleInfo>
+  </relatedItem>
+  <relatedItem type="host">
+    <mods:name type="personal">Williams Archives and Special Collections</mods:name>
+  </relatedItem>
+  <recordInfo>
+    <languageOfCataloging>
+      <languageTerm type="code" authority="iso639-3">eng</languageTerm>
+    </languageOfCataloging>
+  </recordInfo>
+</mods>

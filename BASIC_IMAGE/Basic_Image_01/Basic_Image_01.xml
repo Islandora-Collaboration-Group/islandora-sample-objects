@@ -1,0 +1,39 @@
+
+<mods:mods xmlns="http://www.loc.gov/mods/v3" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="3.5" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-5.xsd">
+  <mods:titleInfo>
+    <mods:title>Active lavaka in meander bend of river</mods:title>
+  </mods:titleInfo>
+  <mods:name type="personal">
+    <mods:namePart>Cox, Ronadh</mods:namePart>
+    <mods:role>
+      <mods:roleTerm authority="marcrelator" type="text">Photographer</mods:roleTerm>
+    </mods:role>
+  </mods:name>
+  <mods:typeOfResource>still image</mods:typeOfResource>
+  <mods:genre>Photograph</mods:genre>
+  <mods:physicalDescription>
+    <mods:reformattingQuality>access</mods:reformattingQuality>
+    <mods:internetMediaType>jpeg</mods:internetMediaType>
+    <mods:digitalOrigin>digitized other analog</mods:digitalOrigin>
+  </mods:physicalDescription>
+  <mods:abstract>Active lavaka in meander bend of river, Field Number Y27, UTM Easting 203643, UTM Northing 8060913, UTM Zone 39K</mods:abstract>
+  <mods:subject>
+    <mods:topic>erosion</mods:topic>
+    <mods:topic>Rivers</mods:topic>
+    <mods:geographic>Madagascar</mods:geographic>
+  </mods:subject>
+  <mods:relatedItem type="host">
+    <mods:physicalDescription>
+      <mods:form>image/jpeg</mods:form>
+    </mods:physicalDescription>
+  </mods:relatedItem>
+  <mods:identifier type="local">Basic_Image_01</mods:identifier>
+  <mods:accessCondition type="restrictions on access">Contact Archives and Special Collections at archives@williams.edu</mods:accessCondition>
+  <mods:recordInfo>
+    <mods:recordContentSource>Ranana Dine</mods:recordContentSource>
+    <mods:languageOfCataloging>
+      <mods:languageTerm authority="iso639-3" type="code">eng</mods:languageTerm>
+    </mods:languageOfCataloging>
+    <mods:descriptionStandard>DACS</mods:descriptionStandard>
+  </mods:recordInfo>
+</mods:mods>

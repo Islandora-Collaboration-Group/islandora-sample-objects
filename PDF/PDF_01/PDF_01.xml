@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mods:mods xmlns:mods="http://www.loc.gov/mods/v3" xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" version="3.5" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-5.xsd">
+  <mods:titleInfo>
+    <mods:title>"Arches of fire"</mods:title>
+    <mods:subTitle>the Civil War and its aftermath in the minds of white southern children</mods:subTitle>
+  </mods:titleInfo>
+  <mods:name type="personal">
+    <mods:namePart>Davidson, Ben</mods:namePart>
+    <mods:role>
+      <mods:roleTerm type="text" authority="marcrelator">Author</mods:roleTerm>
+    </mods:role>
+  </mods:name>
+  <mods:name type="personal">
+    <mods:namePart>Dew, Charles</mods:namePart>
+    <mods:role>
+      <mods:roleTerm type="text" authority="marcrelator">Advisor</mods:roleTerm>
+    </mods:role>
+  </mods:name>
+  <mods:name type="corporate">
+    <mods:namePart>History</mods:namePart>
+    <mods:role>
+      <mods:roleTerm type="text" authority="marcrelator">Department</mods:roleTerm>
+    </mods:role>
+  </mods:name>
+  <mods:typeOfResource>text</mods:typeOfResource>
+  <mods:originInfo>
+    <mods:dateIssued encoding="w3cdtf" keyDate="yes">2010</mods:dateIssued>
+  </mods:originInfo>
+  <mods:language>
+    <mods:languageTerm type="code" authority="iso639-3">eng</mods:languageTerm>
+  </mods:language>
+  <mods:physicalDescription>
+    <mods:reformattingQuality>access</mods:reformattingQuality>
+    <mods:internetMediaType>PDF</mods:internetMediaType>
+    <mods:digitalOrigin>digitized other analog</mods:digitalOrigin>
+  </mods:physicalDescription>
+  <mods:identifier type="filename">PDF_01</mods:identifier>
+  <mods:accessCondition type="restrictions on access">Contact Archives and Special Collections at archives@williams.edu</mods:accessCondition>
+  <mods:recordInfo>
+    <mods:languageOfCataloging>
+      <mods:languageTerm type="code" authority="iso639-3">eng</mods:languageTerm>
+    </mods:languageOfCataloging>
+  </mods:recordInfo>
+</mods:mods>

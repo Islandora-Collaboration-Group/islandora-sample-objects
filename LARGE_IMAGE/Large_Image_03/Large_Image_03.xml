@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mods:mods xmlns:mods="http://www.loc.gov/mods/v3" xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" version="3.5" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-5.xsd">
+  <mods:titleInfo>
+    <mods:title>Cox 111</mods:title>
+  </mods:titleInfo>
+  <mods:name type="personal">
+    <mods:namePart>Cox, Ronadh</mods:namePart>
+    <mods:role>
+      <mods:roleTerm type="text" authority="marcrelator">Photographer</mods:roleTerm>
+    </mods:role>
+  </mods:name>
+  <mods:typeOfResource>still image</mods:typeOfResource>
+  <mods:genre>35mm Slide</mods:genre>
+  <mods:originInfo>
+    <mods:dateIssued encoding="w3cdtf" keyDate="yes">1994</mods:dateIssued>
+  </mods:originInfo>
+  <mods:physicalDescription>
+    <mods:reformattingQuality>preservation</mods:reformattingQuality>
+    <mods:internetMediaType>tiff</mods:internetMediaType>
+    <mods:digitalOrigin>digitized other analog</mods:digitalOrigin>
+  </mods:physicalDescription>
+  <mods:abstract>More bioturbation. Also some small-scale load features.</mods:abstract>
+  <mods:subject>
+    <mods:topic>Sedimentology</mods:topic>
+    <mods:topic>Soft Sediment Deformation</mods:topic>
+    <mods:topic>Bioturbation</mods:topic>
+    <mods:geographic>Africa</mods:geographic>
+    <mods:geographic>South Africa--Zinguin Tunnel</mods:geographic>
+    <mods:geographic>South Africa--Middle Ekka Group</mods:geographic>
+    <mods:geographic>South Africa--Vryheid Formation</mods:geographic>
+  </mods:subject>
+  <mods:identifier type="doi">Large_Image_03</mods:identifier>
+  <mods:accessCondition type="restrictions on access">Contact Archives and Special Collections at archives@williams.edu</mods:accessCondition>
+  <mods:recordInfo>
+    <mods:recordContentSource>Anna Leonard</mods:recordContentSource>
+    <mods:languageOfCataloging>
+      <mods:languageTerm type="code" authority="iso639-3">eng</mods:languageTerm>
+    </mods:languageOfCataloging>
+    <mods:descriptionStandard>DACS</mods:descriptionStandard>
+  </mods:recordInfo>
+</mods:mods>

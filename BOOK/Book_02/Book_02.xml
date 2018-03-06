@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mods:mods xmlns:mods="http://www.loc.gov/mods/v3" xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" version="3.5" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-5.xsd">
+  <mods:titleInfo>
+    <mods:title>Gulielmensian 1864</mods:title>
+  </mods:titleInfo>
+  <mods:name type="corporate">
+    <mods:namePart>Williams College</mods:namePart>
+    <mods:role>
+      <mods:roleTerm type="text" authority="marcrelator">Source</mods:roleTerm>
+    </mods:role>
+  </mods:name>
+  <mods:typeOfResource>still image</mods:typeOfResource>
+  <mods:genre>yearbook</mods:genre>
+  <mods:originInfo>
+    <mods:place>
+      <mods:placeTerm type="text">Williamstown, MA</mods:placeTerm>
+    </mods:place>
+    <mods:dateIssued encoding="w3cdtf" keyDate="yes">1963</mods:dateIssued>
+    <mods:publisher>C.E. Bigelow</mods:publisher>
+  </mods:originInfo>
+  <mods:language>
+    <mods:languageTerm type="code" authority="iso639-3">eng</mods:languageTerm>
+  </mods:language>
+  <mods:physicalDescription>
+    <mods:reformattingQuality>preservation</mods:reformattingQuality>
+    <mods:internetMediaType>tiff</mods:internetMediaType>
+    <mods:digitalOrigin>digitized other analog</mods:digitalOrigin>
+  </mods:physicalDescription>
+  <mods:abstract>Williams College yearbook for the Class of 1864</mods:abstract>
+  <mods:subject>
+    <mods:topic>yearbooks</mods:topic>
+  </mods:subject>
+  <mods:relatedItem type="host">
+    <mods:physicalDescription>
+      <mods:form>image/tiff</mods:form>
+    </mods:physicalDescription>
+  </mods:relatedItem>
+  <mods:identifier type="collection">Book_02</mods:identifier>
+  <mods:accessCondition type="restrictions on access">Contact Archives and Special Collections at archives@williams.edu</mods:accessCondition>
+  <mods:recordInfo>
+    <mods:languageOfCataloging>
+      <mods:languageTerm type="code" authority="iso639-3">eng</mods:languageTerm>
+    </mods:languageOfCataloging>
+    <mods:recordContentSource>R</mods:recordContentSource>
+  </mods:recordInfo>
+</mods:mods>

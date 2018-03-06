@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mods:mods xmlns:mods="http://www.loc.gov/mods/v3" xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" version="3.5" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-5.xsd">
+  <mods:titleInfo>
+    <mods:title>Bringing OER to the Liberal Arts: an innovative grant program</mods:title>
+  </mods:titleInfo>
+  <mods:name type="personal">
+    <mods:namePart>Jonathan Miller</mods:namePart>
+    <mods:role>
+      <mods:roleTerm type="text" authority="marcrelator">Author</mods:roleTerm>
+    </mods:role>
+  </mods:name>
+  <mods:typeOfResource>text</mods:typeOfResource>
+  <mods:genre>Book chapter</mods:genre>
+  <mods:originInfo>
+    <mods:dateIssued encoding="w3cdtf" keyDate="yes">2017</mods:dateIssued>
+    <mods:place>
+      <mods:placeTerm type="text">Chicago, IL</mods:placeTerm>
+    </mods:place>
+    <mods:publisher>ALA Editions</mods:publisher>
+  </mods:originInfo>
+  <mods:language>
+    <mods:languageTerm type="code" authority="iso639-3">eng</mods:languageTerm>
+  </mods:language>
+  <mods:physicalDescription>
+    <mods:reformattingQuality>access</mods:reformattingQuality>
+    <mods:internetMediaType>PDF</mods:internetMediaType>
+    <mods:digitalOrigin>born digital</mods:digitalOrigin>
+  </mods:physicalDescription>
+  <mods:abstract>A common stereotype of liberal arts colleges is that they are elite institutions occupying a small niche in U.S. higher education serving a small proportion of students whose families can afford to pay for small class sizes and personal attention from professors. Such a student population, and the professors who teach them, hardly seems like fertile ground for the growth of Open Education Resources (OER). Add to this liberal arts stereotype the very real phenomenon that personal attention from faculty also means that many courses at liberal arts colleges are, in the best sense of the word, idiosyncratic, and do not make use of traditional, standardized, textbooks. With a small number of librarians to serve the diverse information needs of the community, why would one such liberal arts college library devote time and resources to an innovative OER grant program? This chapter describes the genesis of the OER grant program at Rollins College; why we decided to support a grantee through three iterations of a course; how and why we involved other experts from Instructional Design &amp; Technology and from the Center for Teaching Effectiveness; outlines our experience with the first three grantees; and finally relates this grant program to our strategic focus.</mods:abstract>
+  <mods:identifier type="filename">PDF_03</mods:identifier>
+  <mods:accessCondition type="restrictions on access">Copyright retained by author.</mods:accessCondition>
+  <mods:recordInfo>
+    <mods:languageOfCataloging>
+      <mods:languageTerm type="code" authority="iso639-3">eng</mods:languageTerm>
+    </mods:languageOfCataloging>
+  </mods:recordInfo>
+  <mods:note type="Source">"So, You Find Yourself Supervising Faculty Librarians. What Now?" So You Want to Be an Academic Library Director. Ed. Colleen S. Harris. Chicago, IL: ALA Editions, 2017.</mods:note>
+</mods:mods>
