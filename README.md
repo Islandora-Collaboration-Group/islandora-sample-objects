@@ -1,8 +1,14 @@
 # Islandora Sample Objects
 
-Sample set of objects and corresponding metadata. Examples are provided in raw and zipped formats, allowing for quicker bulk ingestion into Islandora.
+This sample set of objects and corresponding metadata has been organized by object types.
+You may ingest these objects into any Islandora installation.
+These objects are provided both in raw and zipped formats: raw enables you to view the files; the zipped version is typically how you would ingest into Islandora.
 
-## Content Models Provided
+Islandora contains Drupal modules called Islandora Solution Packs and they interact with file objects (like this set of samples) in the following manner:
+
+> Solution Packs present a starting point for users with particular types of data, such as books or audio files. A solution pack will allow users to ingest and edit a particular type of content, including derivatives and metadata. A solution pack also provides a default empty collection for users, configured for that type of content. [source](https://wiki.duraspace.org/display/ISLANDORA/Solution+Packs)
+
+## Content Models Provided (3 samples of each)
 
 * AUDIO
 * BASIC_IMAGE
@@ -11,11 +17,14 @@ Sample set of objects and corresponding metadata. Examples are provided in raw a
 * PDF
 * VIDEO
 
-## TODO: Content Models to Add
+## Please contribute samples for these content models
 
 * COMPOUND OBJECT
+* Disk Image
+* Entities
+* Islandora Paged Content
 * Newspaper
-* more...
+* Web Archive
 
-## See also: 
+### Helpful related materials:
 * [Islandora Sample Content Generator](https://github.com/mjordan/islandora_scg)
