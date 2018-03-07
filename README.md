@@ -17,7 +17,7 @@ Islandora contains Drupal modules called Islandora Solution Packs and they inter
 * PDF
 * VIDEO
 
-## Please contribute samples for these content models
+## Seeking contributions of samples for these content models
 
 * COMPOUND OBJECT
 * Disk Image
@@ -26,5 +26,12 @@ Islandora contains Drupal modules called Islandora Solution Packs and they inter
 * Newspaper
 * Web Archive
 
-### Helpful related materials:
+## Future Work:
+
+* Create a Twig template for using the [Islandora Multi Importer](https://github.com/mnylc/islandora_multi_importer) (IMI) to bulk import this sample set of objects and metadata into Islandora.
+
+## Contact Us
+* If you have questions, please contact [David Keiser-Clark](dwk2@williams.edu) or post to the [Islandora google group](https://groups.google.com/forum/?utm_source=digest&utm_medium=email#!forum/islandora/topics)
+
+#### See also: A more advanced method for dynamically generating sample content
 * [Islandora Sample Content Generator](https://github.com/mjordan/islandora_scg)
