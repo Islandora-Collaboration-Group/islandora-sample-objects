@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+{# Digital_Grinnell_MODS_Master.twig  Revision 9.0
+
+This TWIG template for IMI import is intended to serve as a general-purpose
+starting point for MODS import into Digital Grinnell.
+
+The canonical copy of this Twig is part of a 4-tab Google Sheet named
+Digital_Grinnell_MODS_Master.  Its address is: https://docs.google.com/spreadsheets/d/1G_pQgKJwtgBZYDAHcMC7dCTOnwexIYGHjarHPFKaAOg
+
+History --------------------
+Rev 9.0
+  Changed import_index and import_source behavior to use IMI's new imi_import_source_tracking feature and field
+Rev. 8
+  Corrected <physicalDescription> logic and indentation
+Rev. 7
+  Added the Import_Source column intended to store the URL of the worksheet (Google Sheet) the data was imported from.
+Rev. 6
+  Corrected primarySort to default value of 99 (was 1)
+Rev. 5.1
+  Sync DGAdmin where the Rev. 4 sheet was incorrectly identified as 5
+Rev. 5
+  Added /mods/extension/hidden_creator support
+Rev. 4
+  Added Pull_Quotes column processing to create a /mods/extension/pull_quotes field.
+Rev. 3
+  Removed capitalization on default 'Creator' roleTerm, and removed the <dg_creators> element entirely.
+Rev. 2
+  Added ~Display_Label to the Other_Date field, '|trim' to all of the originInfo fields, and
+    if name is not null and name|trim is not empty'  to all multi-value fields.
+Rev. 1
+  Initial MASTER saved on 28-July-2017
+  Derived from CoC.twig
+  IMI twig template created for ingest of PHPP - Chamber of Commerce objects.  MM 24-July-2017
+  Derived from dg_base_mods_template.twig
+  Created 1-May-2017 from base_mods_template.twig that shipped with the IMI module.
+
+Note that the order of MODS elements here is significant.  It is the same order that our --reorder
+self-transform produces.
+
+-Mark M.
+
+Use ----------------------------------------------
+This TWIG generally supports four field syntaxes…
+
+  value                …for simple single-valued fields.  The header on this field should be singular.
+  value~attr              …for a single-valued field with an optional attribute.  The header on this field should be singular but include a ‘~something’ suffix.
+  value1 | value2 | value3        …for simple multi-valued fields.  The header on this field should be plural to indicate that it can be multivalued.
+  valuet1~attr1 | value2 | value3~attr3  …for multi-valued fields with attribute possibilities.  This needs a plural header with a ‘~something’ suffix.
+
+In the 2nd and 4th syntaxes a value may exist without an attribute, like ‘value2’ in the
+line above.  When no ~attribute is present a default will be assumed and that
+default is defined in the Twig file.  The default varies from field-to-field.
+
+An example…
+
+  Personal_Names~Roles
+  ——————————————————————————————————————
+  Doe, Jane | Doe, John ~ spouse | Kong, King ~ gorilla
+
+In the above example ‘Jane Doe’ would be identified as the ‘Creator’, since that
+is the default personal name role in our Twig template.  ‘John Doe’ and ‘King Kong’
+would be identified as contributors with roles of ‘spouse’ and ‘gorilla’,
+respectively.  The MODS from this field would look like this...
+
+  <name type=‘personal’>
+    <namePart>Doe, Jane</namePart>
+    <role>
+      <roleTerm type=‘text'>creator</roleTerm>
+    </role>
+  </name>
+  <name type=‘personal’>
+    <namePart>Doe, John</namePart>
+    <role>
+      <roleTerm type=‘text’>spouse</roleTerm>
+    </role>
+  </name>
+  <name type=‘personal’>
+    <namePart>Kong, King</namePart>
+    <role>
+      <roleTerm type=‘text’>gorilla</roleTerm>
+    </role>
+  </name>
+
+--------------------------------------------------------
+The corresponding worksheet headers should be ordered and read like this...
+
+PID, STATUS,  Import_Index,  PARENT,  CMODEL,  SEQUENCE,  OBJ, Title,
+Alternative_Titles,  Personal_Names~Roles,  Corporate_Names~Roles, Abstract,
+Index_Date,  Other_Date~Display_Label,  Date_Issued, Date_Captured,  Publisher,
+Place_Of_Publication,  Public_Notes~Types,  Private_Notes~Types, Keywords,
+LCSH_Subjects, Subjects_Temporal, Subjects_Geographic, Subjects_Names~Types,
+Coordinate,  Type_of_Resource,  Genre, Extent, Form, MIME_Type, Digital_Origin,
+Language_Names~Codes,  Local_Identifier,  Physical_Location, Shelf_Locator,
+Classifications~authorities, Related_Items~types,  Access_Condition,  Import_Source
+
+#}
+
+{% block content %}
+{% autoescape false %}
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mods="http://www.loc.gov/mods/v3" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-4.xsd">
+
+<titleInfo>
+  <title>{{ data.title }}</title>
+</titleInfo>
+
+{% if attribute(data, 'alternative_titles') %}
+  <titleInfo type='alternative'>
+  {% for title in attribute(data, 'alternative_titles')|split('|') %}
+    <title>{{ title|trim }}</title>
+  {% endfor %}
+  </titleInfo>
+{% endif %}
+
+{# Creator/Contributor personal names logic of the form name1~role1|name2~role2|name3|name4~role4 #}
+{# Note that when role is omitted, like name3 above, 'Creator' is assumed #}
+{% if  attribute(data, 'personal_names~roles') %}
+  {% for name in attribute(data, 'personal_names~roles')|split('|') %}
+    {% if name is not null and name|trim is not empty %}
+      <name type="personal">
+      {% if '~' in name %}
+        {% set pcc_parts = name|split('~',2) %}
+        <namePart>{{ pcc_parts[0]|trim }}</namePart>
+        <role>
+          <roleTerm type="text">{{ pcc_parts[1]|trim }}</roleTerm>
+        </role>
+      {% else %}
+        <namePart>{{ name|trim }}</namePart>
+        <role>
+          <roleTerm type="text">creator</roleTerm>
+        </role>
+      {% endif %}
+      </name>
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{# Creator/Contributor corporate names logic of the form name1~role1|name2~role2|name3|name4~role4 #}
+{# Note that when role is omitted, like name3 above, 'Creator' is assumed #}
+{% if  attribute(data, 'corporate_names~roles') %}
+  {% for name in attribute(data, 'corporate_names~roles')|split('|') %}
+    {% if name is not null and name|trim is not empty %}
+      <name type="corporate">
+      {% if '~' in name %}
+        {% set ccc_parts = name|split('~',2) %}
+        <namePart>{{ ccc_parts[0]|trim }}</namePart>
+        <role>
+          <roleTerm type="text">{{ ccc_parts[1]|trim }}</roleTerm>
+        </role>
+      {% else %}
+        <namePart>{{ name|trim }}</namePart>
+        <role>
+          <roleTerm type="text">creator</roleTerm>
+        </role>
+      {% endif %}
+      </name>
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+<abstract>{{ data.abstract }}</abstract>
+
+{% if attribute(data, 'index_date') or attribute(data, 'other_date~display_label') or attribute(data, 'date_issued') or attribute(data, 'publisher') or attribute(data, 'place_of_publication') or attribute(data, 'date_captured') %}
+  <originInfo>
+  {% if attribute(data, 'index_date') %}
+    <dateCreated>{{ data.index_date|trim }}</dateCreated>
+  {% endif %}
+  {% if attribute(data, 'other_date~display_label') %}
+    {% set od_field = attribute(data, 'other_date~display_label') %}
+    {% if '~' in od_field %}
+      {% set od_parts = od_field|split('~',2) %}
+      <dateOther displayLabel='{{ od_parts[1]|trim }}'>{{ od_parts[0]|trim }}</dateOther>
+    {% else %}
+      <dateOther>{{ od_field|trim }}</dateOther>
+    {% endif %}
+  {% endif %}
+  {% if attribute(data, 'date_issued') %}
+    <dateIssued>{{ data.date_issued|trim }}</dateIssued>
+  {% endif %}
+  {% if attribute(data, 'date_captured') %}
+    <dateCaptured>{{ data.date_captured|trim }}</dateCaptured>
+  {% endif %}
+  {% if attribute(data, 'publisher') %}
+    <publisher>{{ data.publisher|trim }}</publisher>
+  {% endif %}
+  {% if attribute(data, 'place_of_publication') %}
+    <place>
+      <placeTerm type="text">{{ data.place_of_publication|trim }}</placeTerm>
+    </place>
+  {% endif %}
+  </originInfo>
+{% endif %}
+
+{# July 2017... Replacing the simple note1|note2 logic below with support for note1~type1|note2|note3~type3 logic #}
+{% if  attribute(data, 'public_notes~types') %}
+  {% for note in attribute(data, 'public_notes~types')|split('|') %}
+    {% if note is not null and note|trim is not empty %}
+      {% if '~' in note %}
+        {% set note_parts = note|split('~',2) %}
+        <note type='{{ note_parts[1]|trim }}'>{{ note_parts[0]|trim }}</note>
+      {% else %}
+        <note>{{ note|trim }}</note>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{# @TODO...This logic needs some attention! #}
+{% if  attribute(data, 'private_notes~types') %}
+  {% for pr_note in attribute(data, 'private_notes~types')|split('|') %}
+    {% if pr_note is not null and pr_note|trim is not empty %}
+      {% if '~' in pr_note %}
+        {% set pr_note_parts = pr_note|split('~',2) %}
+        <note type='{{ pr_note_parts[1]|trim }}'>{{ pr_note_parts[0]|trim }}</note>
+      {% else %}
+        <note>{{ pr_note|trim }}</note>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% if attribute(data, 'keywords') %}
+  <subject>
+  {% for keyword in attribute(data, 'keywords')|split('|') %}
+    {% if keyword is not null and keyword|trim is not empty %}
+      <topic>{{ keyword|trim }}</topic>
+    {% endif %}
+  {% endfor %}
+  </subject>
+{% endif %}
+
+{% if  attribute(data, 'lcsh_subjects') %}
+  <subject authority="lcsh">
+  {% for topic in attribute(data, 'lcsh_subjects')|split('|') %}
+    {% if topic is not null and topic|trim is not empty %}
+      <topic>{{ topic|trim }}</topic>
+    {% endif %}
+  {% endfor %}
+  </subject>
+{% endif %}
+
+{% if  attribute(data, 'subjects_geographic') %}
+  <subject authority="lcsh">
+  {% for geographic in attribute(data, 'subjects_geographic')|split('|') %}
+    {% if geographic is not null and geographic|trim is not empty %}
+      <geographic>{{ geographic|trim }}</geographic>
+    {% endif %}
+  {% endfor %}
+  </subject>
+{% endif %}
+
+{% if  attribute(data, 'subjects_temporal') %}
+  <subject authority="lcsh">
+  {% for temporal in attribute(data, 'subjects_temporal')|split('|') %}
+    {% if temporal is not null and temporal|trim is not empty %}
+      <temporal>{{ temporal|trim }}</temporal>
+    {% endif %}
+  {% endfor %}
+  </subject>
+{% endif %}
+
+{% if attribute(data, 'subjects_names~types') %}
+  {% for subjects_name in attribute(data, 'subjects_names~types')|split('|') %}
+    {% if subjects_name is not null and subjects_name|trim is not empty %}
+      <subject authority="lcsh">
+      {% if '~' in subjects_name %}
+        {% set subjects_name_parts = subjects_name|split('~',2) %}
+        <name type='{{ subjects_name_parts[1]|trim }}'>
+          <namePart>{{ subjects_name_parts[0]|trim }}</namePart>
+        </name>
+      {% else %}
+        <name>
+          <namePart>{{ subjects_name|trim }}</namePart>
+        </name>
+      {% endif %}
+      </subject>
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% if  attribute(data, 'coordinate') %}
+  <subject>
+    <cartographics>
+      <coordinates>{{ data.coordinate }}</coordinates>
+    </cartographics>
+  </subject>
+{% endif %}
+
+{% if  attribute(data, 'type_of_resource') %}
+  <typeOfResource>{{ data.type_of_resource|trim }}</typeOfResource>
+{% endif %}
+
+{% if  attribute(data, 'genre') %}
+  <genre>{{ data.genre|trim }}</genre>
+{% endif %}
+
+{% if attribute(data, 'extent') or attribute(data, 'form') or attribute(data, 'mime_type') or attribute(data, 'digital_origin') %}
+  <physicalDescription>
+  {% if attribute(data, 'form') %}
+    <form>{{ data.form }}</form>
+  {% endif %}
+  {% if attribute(data, 'extent') %}
+    <extent>{{ data.extent }}</extent>
+  {% endif %}
+  {% if attribute(data, 'mime_type') %}
+    <internetMediaType>{{ data.mime_type }}</internetMediaType>
+  {% endif %}
+  {% if attribute(data, 'digital_origin') %}
+    <digitalOrigin>{{ data.digital_origin }}</digitalOrigin>
+  {% endif %}
+  </physicalDescription>
+{% endif %}
+
+{% if attribute(data, 'language_names~codes') %}
+  <language>
+  {% for language in attribute(data, 'language_names~codes')|split('|') %}
+    {% if language is not null and language|trim is not empty %}
+      {% if '~' in language %}
+        {% set lparts = language|split('~',2) %}
+        <languageTerm type="text">{{ lparts[0]|trim }}</languageTerm>
+        <languageTerm type="code" authority="iso639-2b">{{ lparts[1]|trim }}</languageTerm>
+      {% else %}
+        <languageTerm type="text">{{ language|trim }}</languageTerm>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+  </language>
+{% endif %}
+
+{% if attribute(data, 'local_identifier') %}
+  <identifier type="local">{{ data.local_identifier|trim }}</identifier>
+{% endif %}
+
+{% if attribute(data, 'physical_location') or attribute(data, 'shelf_locator') %}
+  <location>
+  {% if attribute(data, 'physical_location') %}
+    <physicalLocation>{{ data.physical_location }}</physicalLocation>
+  {% endif %}
+  {% if attribute(data, 'shelf_locator') %}
+    <shelfLocator>{{ data.shelf_locator }}</shelfLocator>
+  {% endif %}
+  </location>
+{% endif %}
+
+{% if attribute(data, 'classifications~authorities') %}
+  {% for classification in attribute(data, 'classifications~authorities')|split('|') %}
+    {% if classification is not null and classification|trim is not empty %}
+      {% if '~' in classification %}
+        {% set classification_parts = classification|split('~',2) %}
+        <classification authoritiy='{{ classification_parts[1]|trim }}' type='mixed'>{{ classification_parts[0]|trim }}</classification>
+      {% else %}
+        <classification type='mixed'>{{ classification|trim }}</classification>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{# This block is CUSTOM...it is specific to ALL Digital Grinnell objects #}
+<relatedItem type="isPartOf">
+  <titleInfo>
+    <title>Digital Grinnell</title>
+  </titleInfo>
+</relatedItem>
+
+{# Supports relations of the form related_item1~type1 | related_item2 | related_item3~type3 #}
+{# If ~type is omitted, as in related_item2 above, the type = 'isPartOf' is assumed #}
+{% if  attribute(data, 'related_items~types') %}
+  {% for relation in attribute(data, 'related_items~types')|split('|') %}
+    {% if relation is not null and relation|trim is not empty %}
+      {% if '~' in relation %}
+        {% set relation_parts = relation|split('~',2) %}
+        <relatedItem type='{{ relation_parts[1]|trim }}'>
+          <titleInfo>
+            <title>{{ relation_parts[0] }}</title>
+          </titleInfo>
+        </relatedItem>
+      {% else %}
+        <relatedItem type='isPartOf'>
+          <titleInfo>
+            <title>{{ relation }}</title>
+          </titleInfo>
+        </relatedItem>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% if attribute(data, 'access_condition') %}
+  <accessCondition type="useAndReproduction">{{ data.access_condition }}</accessCondition>
+{% else %}
+  <accessCondition type="useAndReporoduction">Copyright to this work is held by the author(s), in accordance with United States copyright law (USC 17). Readers of this work have certain rights as defined by the law, including but not limited to fair use (17 USC 107 et seq.).</accessCondition>
+{% endif %}
+
+{# The following MODS extension elements may be specific to Digital Grinnell! #}
+<extension>
+  <primarySort>99</primarySort>
+  {% if attribute(data, 'imi_import_source_tracking') %}
+    <dg_importSource>{{ data.imi_import_source_tracking }}</dg_importSource>
+  {% endif %}
+  {% if attribute(data, 'import_index') %}
+    <dg_importIndex>{{ data.import_index }}</dg_importIndex>
+  {% endif %}
+  {% if attribute(data, 'hidden_creator') %}
+    <hidden_creator>{{ data.hidden_creator }}</hidden_creator>
+  {% endif %}
+  {% if  attribute(data, 'pull_quotes') %}
+    {% for pull_quote in attribute(data, 'pull_quotes')|split('|') %}
+      {% if pull_quote is not null and pull_quote|trim is not empty %}
+        <pull_quote>{{ pull_quote|trim }}</pull_quote>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+</extension>
+
+</mods>
+{% endautoescape %}
+{% endblock %}

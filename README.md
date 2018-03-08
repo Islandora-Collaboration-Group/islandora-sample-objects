@@ -8,7 +8,7 @@ Islandora contains Drupal modules called Islandora Solution Packs and they inter
 
 > Solution Packs present a starting point for users with particular types of data, such as books or audio files. A solution pack will allow users to ingest and edit a particular type of content, including derivatives and metadata. A solution pack also provides a default empty collection for users, configured for that type of content. [source](https://wiki.duraspace.org/display/ISLANDORA/Solution+Packs)
 
-## Content Models Provided (3 samples of each)
+## Content Models Provided (1, 2 or 3 samples of each)
 
 * AUDIO
 * BASIC_IMAGE
@@ -16,19 +16,21 @@ Islandora contains Drupal modules called Islandora Solution Packs and they inter
 * LARGE_IMAGE
 * PDF
 * VIDEO
+* COMPOUND_OBJECT
+    * This sample also includes one BINARY object. 
+* WEB_ARCHIVE
 
 ## Seeking contributions of samples for these content models
 
-* COMPOUND OBJECT
 * Disk Image
 * Entities
 * Islandora Paged Content
 * Newspaper
-* Web Archive
 
 ## Future Work:
 
 * Create a Twig template for using the [Islandora Multi Importer](https://github.com/mnylc/islandora_multi_importer) (IMI) to bulk import this sample set of objects and metadata into Islandora.
+    * Note that the COMPOUND_OBJECT sample now includes an IMI .twig template and .csv file for this purpose.
 
 ## Contact Us
 * If you have questions, please contact [David Keiser-Clark](dwk2@williams.edu) or post to the [Islandora google group](https://groups.google.com/forum/?utm_source=digest&utm_medium=email#!forum/islandora/topics)

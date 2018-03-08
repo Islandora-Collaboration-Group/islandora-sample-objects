@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mods="http://www.loc.gov/mods/v3" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-4.xsd">
+
+<titleInfo>
+	<title>Audrey (Bunny) Howard Swanson '43</title>
+</titleInfo>
+
+
+            <name type="personal">
+        	<namePart>Howard Swanson,  Audrey (Bunny) '43</namePart>
+	<role>
+	  <roleTerm type="text">creator</roleTerm>
+	</role>
+            </name>
+                <name type="personal">
+      		<namePart>Figa, Alenka '12</namePart>
+	<role>
+	  <roleTerm type="text">interviewer</roleTerm>
+	</role>
+            </name>
+                <name type="personal">
+      		<namePart>Figa, Alenka '12</namePart>
+	<role>
+	  <roleTerm type="text">transcriber</roleTerm>
+	</role>
+            </name>
+                <name type="personal">
+      		<namePart>Galloway, Lily '17</namePart>
+	<role>
+	  <roleTerm type="text">reviewer</roleTerm>
+	</role>
+            </name>
+                <name type="personal">
+      		<namePart>McFate, Mackenzie '18</namePart>
+	<role>
+	  <roleTerm type="text">reviewer</roleTerm>
+	</role>
+            </name>
+            
+            <name type="corporate">
+                	  <namePart>Grinnell College. Office of College and Alumni Relations.</namePart>
+	  <role>
+	    <roleTerm type="text">supporting host</roleTerm>
+	  </role>
+              </name>
+      
+<abstract>Alumni oral history interview with Audrey (Bunny) Howard Swanson '43. Recorded June 1, 2012.</abstract>
+
+  <originInfo>
+      <dateCreated>1943</dateCreated>
+                        <dateOther displayLabel="Date of Interview">June 1, 2012</dateOther>
+                <publisher>Grinnell College</publisher>
+    </originInfo>
+
+
+
+
+  <subject authority="lcsh">
+            <topic>Grinnell College.</topic>
+                <topic>Alumni and alumnae.</topic>
+                <topic>History.</topic>
+                <topic>Presidents.</topic>
+                <topic>Grinnell College. English Department., Women's Quadrangle (Grinnell).</topic>
+                <topic>Military service, Voluntary.</topic>
+                <topic>Draft.</topic>
+                <topic>Dibble Hall (Grinnell, Iowa).</topic>
+        </subject>
+
+
+
+
+
+  <typeOfResource>sound recording-nonmusical</typeOfResource>
+
+  <genre>interview</genre>
+
+  <physicalDescription>
+        <extent>34 minutes 16 seconds</extent>
+        <internetMediaType>audio/mpeg</internetMediaType>
+        <digitalOrigin>born digital</digitalOrigin>
+    </physicalDescription>
+
+  <language>
+                            <languageTerm type="text">English</languageTerm>
+	<languageTerm type="code" authority="iso639-2b">eng</languageTerm>
+              </language>
+
+
+
+
+<relatedItem type="isPartOf">
+  <titleInfo>
+    <title>Digital Grinnell</title>
+  </titleInfo>
+</relatedItem>
+
+
+  <accessCondition type="useAndReporoduction">Copyright to this work is held by the author(s), in accordance with United States copyright law (USC 17). Readers of this work have certain rights as defined by the law, including but not limited to fair use (17 USC 107 et seq.).</accessCondition>
+
+<extension>
+  <primarySort>99</primarySort>
+      <dg_importIndex>50</dg_importIndex>
+                      <pull_quote>We had a tradition at the time of borrowing our boyfriend's sweater. He brought his and he started to slip it over my head. I knew, yes, I knew that as he brought that sweater down he was going to kiss me. It was most exciting.</pull_quote>
+            <hidden_creators>Howard Swanson,  Audrey (Bunny) '43</hidden_creators></extension>
+
+<identifier type="hdl">http://hdl.handle.net/11084/19423</identifier><identifier type="local">grinnell:19423</identifier></mods>

@@ -1,0 +1,99 @@
+
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <name type="personal" xlink:href="grinnell-auth:223">
+    <role>
+      <roleTerm type="text">author</roleTerm>
+    </role>
+    <namePart type="given">Ravi </namePart>
+    <namePart type="family">Chande</namePart>
+    <namePart>Chande, Ravi</namePart>
+    <affiliation>Class of 2011</affiliation>
+  </name>
+  <name type="personal" xlink:href="grinnell-auth:224">
+    <role>
+      <roleTerm type="text">author</roleTerm>
+    </role>
+    <namePart type="given">Dylan </namePart>
+    <namePart type="family">Gumm</namePart>
+    <namePart>Gumm, Dylan</namePart>
+    <affiliation>Assistant Professor of Computer Science</affiliation>
+  </name>
+  <name type="personal" xlink:href="grinnell-auth:225">
+    <role>
+      <roleTerm type="text">author</roleTerm>
+    </role>
+    <namePart type="given">Jerod J.</namePart>
+    <namePart type="family">Weinman</namePart>
+    <namePart>Weinman, J. J.</namePart>
+  </name>
+  <titleInfo>
+    <title>A Data Set of Annotated Historical Maps</title>
+  </titleInfo>
+  <name type="corporate" xlink:href="grinnell-auth:136">
+    <role>
+      <roleTerm authority="marcrelator" type="text">Supporting host</roleTerm>
+    </role>
+    <namePart>Grinnell College. Computer Science.</namePart>
+  </name>
+  <name type="corporate" xlink:href="grinnell-auth:226">
+    <role>
+      <roleTerm authority="marcrelator" type="text">Supporting host</roleTerm>
+    </role>
+    <namePart>David Rumsey Collection</namePart>
+  </name>
+  <abstract>This data set is designed for testing the performance of optical character recognition algorithms on text in scanned historical map images. Thirty maps from the nineteenth and early twentieth centuries were chosen from the David Rumsey Map Collection (http://davidrumsey.com). Most maps are of individual states, though some are regional and one is of the entire U.S.; most feature little handwritten text. The original MrSid files are converted into uncompressed TIFF images for a manual annotation, stored in XML format.</abstract>
+  <abstract>The authors gratefully acknowledge the David Rumsey Map Collection as the source of the map images, which come with the following notice:  Images copyright © 2000 by Cartography Associates. Images may be reproduced or transmitted, but not for commercial use.  This work is licensed under a Creative Commons [Attribution-NonCommercial-ShareAlike 3.0 Unported] license (http://creativecommons.org/licenses/by-nc-sa/3.0).  By downloading any images from this site, you agree to the terms of that license.</abstract>
+  <originInfo>
+    <dateCreated>2013</dateCreated>
+    <dateIssued>2013-07</dateIssued>
+    <publisher>Grinnell College</publisher>
+    <dateOther displayLabel="Date Created">2013-07</dateOther>
+  </originInfo>
+  <typeOfResource>Dataset</typeOfResource>
+  <physicalDescription>
+    <digitalOrigin>born digital</digitalOrigin>
+    <extent>2 pages</extent>
+    <internetMediaType>pdf</internetMediaType>
+  </physicalDescription>
+  <physicalDescription>
+    <digitalOrigin>born digital</digitalOrigin>
+    <internetMediaType>TAR</internetMediaType>
+  </physicalDescription>
+  <physicalDescription>
+    <digitalOrigin>born digital</digitalOrigin>
+    <internetMediaType>M</internetMediaType>
+  </physicalDescription>
+  <physicalDescription>
+    <digitalOrigin>born digital</digitalOrigin>
+    <internetMediaType>BZ2</internetMediaType>
+  </physicalDescription>
+  <language>
+    <languageTerm type="text">English</languageTerm>
+    <languageTerm type="code">eng</languageTerm>
+  </language>
+  <subject authority="lcsh">
+    <topic>Maps</topic>
+  </subject>
+  <subject authority="lcsh">
+    <topic>Optical character recognition</topic>
+  </subject>
+  <relatedItem type="isPartOf">
+    <titleInfo>
+      <title>Digital Grinnell</title>
+    </titleInfo>
+    <identifier type="uri">grinnell-collection:1</identifier>
+  </relatedItem>
+  <relatedItem type="isPartOf">
+    <titleInfo>
+      <title>Faculty Publications</title>
+    </titleInfo>
+  </relatedItem>
+  <identifier type="hdl">http://hdl.handle.net/11084/10470</identifier>
+  <identifier type="local">grinnell:10470</identifier>
+  <accessCondition type="useAndReproduction">Copyright to this work is held by the author(s), in accordance with United States copyright law (USC 17). Readers of this work have certain rights as defined by the law, including but not limited to fair use (17 USC 107 et seq.).</accessCondition>
+  <mods:extension>
+    <mods:creators>Chande, Ravi; Gumm, Dylan; Weinman, J. J.</mods:creators>
+    <mods:primarySort>99</mods:primarySort>
+    <mods:CModel>islandora:binaryObjectCModel</mods:CModel>
+  </mods:extension>
+</mods>
