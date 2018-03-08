@@ -17,8 +17,9 @@ Islandora contains Drupal modules called Islandora Solution Packs and they inter
 * PDF
 * VIDEO
 * COMPOUND_OBJECT
-    * This sample also includes one BINARY object. 
+    * This sample also includes one BINARY object.
 * WEB_ARCHIVE
+* ORAL_HISTORY
 
 ## Seeking contributions of samples for these content models
 
