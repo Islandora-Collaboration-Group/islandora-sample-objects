@@ -17,7 +17,7 @@ Islandora contains Drupal modules called Islandora Solution Packs and they inter
 * PDF
 * VIDEO
 * COMPOUND_OBJECT
-    * This sample also includes one BINARY object.
+    * This sample also includes one BINARY object and an IMI-compatible CSV file for import, along with a sample TWIG template to engage IMI.  
 * WEB_ARCHIVE
 * ORAL_HISTORY
 
