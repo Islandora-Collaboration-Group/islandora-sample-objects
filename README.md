@@ -38,4 +38,4 @@ Islandora contains Drupal modules called Islandora Solution Packs and they inter
 
 ## See Also: Advanced tools to dynamically generate sample content
 * [Islandora Sample Content Generator](https://github.com/mjordan/islandora_scg) - Uses Drush on the commandline to generate objects
-* [Ten Million with a Hat](https://github.com/discoverygarden/ten_million_with_a_hat) - Adds a drush commandline script for ingesting many objects; say, ten million.
+* [Ten Million with a Hat](https://github.com/discoverygarden/ten_million_with_a_hat) - Adds a Drush commandline script for ingesting many objects; say, ten million.
