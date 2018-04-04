@@ -25,8 +25,6 @@ Islandora contains Drupal modules called Islandora Solution Packs and they inter
 
 * Disk Image
 * Entities
-* Islandora Paged Content
-* Newspaper
 
 ## Future Work:
 
