@@ -1,2 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mods xmlns="http://www.loc.gov/mods/v3" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink"><name type="personal"><role><roleTerm type="text">creator</roleTerm></role><namePart>Ley, Jimmy</namePart></name><titleInfo><title>Jimmy Ley to Mr. and Mrs. W. E. Ley - August 7, 1942</title></titleInfo><originInfo><dateCreated>1942</dateCreated><publisher>Grinnell College</publisher><dateOther displayLabel="Date Created">1942-08-07</dateOther></originInfo><typeOfResource>text</typeOfResource><genre>letter</genre><physicalDescription><digitalOrigin>digitized other analog</digitalOrigin><extent>page 1</extent><internetMediaType>image/tiff</internetMediaType></physicalDescription><language><languageTerm type="code">eng</languageTerm><languageTerm type="text">English</languageTerm></language><classification authority="local" type="mixed">MS 01.162 Box 1 Folder 3 Letter 7 Page 1</classification><relatedItem type="constituent" displayLabel="No Transcription Available"><identifier type="uri">/transcribe/transcribe2.php</identifier></relatedItem><relatedItem type="isPartOf"><titleInfo><title>Digital Grinnell</title></titleInfo></relatedItem><identifier type="hdl">http://hdl.handle.net/11084/11569</identifier><identifier type="local">grinnell:11569</identifier><accessCondition type="useAndReproduction">Copyright to this work is held by the author(s), in accordance with United            States copyright law (USC 17). Readers of this work have certain rights as defined by            the law, including but not limited to fair use (17 USC 107 et seq.).</accessCondition><mods:extension><mods:creators>Ley, Jimmy</mods:creators><mods:primarySort>99</mods:primarySort><mods:CModel>islandora:sp_large_image_cmodel</mods:CModel></mods:extension></mods>
+<mods xmlns="http://www.loc.gov/mods/v3" 
+    xmlns:mods="http://www.loc.gov/mods/v3" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <name type="personal">
+        <role>
+            <roleTerm type="text">creator</roleTerm>
+        </role>
+        <namePart>Ley, Jimmy</namePart>
+    </name>
+    <titleInfo>
+        <title>Jimmy Ley to Mr. and Mrs. W. E. Ley - August 7, 1942</title>
+    </titleInfo>
+    <originInfo>
+        <dateCreated>1942</dateCreated>
+        <publisher>Grinnell College</publisher>
+        <dateOther displayLabel="Date Created">1942-08-07</dateOther>
+    </originInfo>
+    <typeOfResource>text</typeOfResource>
+    <genre>letter</genre>
+    <physicalDescription>
+        <extent>page 1</extent>
+        <internetMediaType>image/tiff</internetMediaType>
+    </physicalDescription>
+    <language>
+        <languageTerm type="code">eng</languageTerm>
+        <languageTerm type="text">English</languageTerm>
+    </language>
+
+    <identifier type="local">grinnell:11569</identifier>
+
+</mods>

@@ -42,7 +42,6 @@
     <namePart>David Rumsey Collection</namePart>
   </name>
   <abstract>This data set is designed for testing the performance of optical character recognition algorithms on text in scanned historical map images. Thirty maps from the nineteenth and early twentieth centuries were chosen from the David Rumsey Map Collection (http://davidrumsey.com). Most maps are of individual states, though some are regional and one is of the entire U.S.; most feature little handwritten text. The original MrSid files are converted into uncompressed TIFF images for a manual annotation, stored in XML format.</abstract>
-  <abstract>The authors gratefully acknowledge the David Rumsey Map Collection as the source of the map images, which come with the following notice:  Images copyright © 2000 by Cartography Associates. Images may be reproduced or transmitted, but not for commercial use.  This work is licensed under a Creative Commons [Attribution-NonCommercial-ShareAlike 3.0 Unported] license (http://creativecommons.org/licenses/by-nc-sa/3.0).  By downloading any images from this site, you agree to the terms of that license.</abstract>
   <originInfo>
     <dateCreated>2013</dateCreated>
     <dateIssued>2013-07</dateIssued>
@@ -50,25 +49,7 @@
     <dateOther displayLabel="Date Created">2013-07</dateOther>
   </originInfo>
   <typeOfResource>Dataset</typeOfResource>
-  <physicalDescription>
-    <digitalOrigin>born digital</digitalOrigin>
-    <extent>2 pages</extent>
-    <internetMediaType>pdf</internetMediaType>
-  </physicalDescription>
-  <physicalDescription>
-    <digitalOrigin>born digital</digitalOrigin>
-    <internetMediaType>TAR</internetMediaType>
-  </physicalDescription>
-  <physicalDescription>
-    <digitalOrigin>born digital</digitalOrigin>
-    <internetMediaType>M</internetMediaType>
-  </physicalDescription>
-  <physicalDescription>
-    <digitalOrigin>born digital</digitalOrigin>
-    <internetMediaType>BZ2</internetMediaType>
-  </physicalDescription>
-  <language>
-    <languageTerm type="text">English</languageTerm>
+   <language>
     <languageTerm type="code">eng</languageTerm>
   </language>
   <subject authority="lcsh">
@@ -77,23 +58,7 @@
   <subject authority="lcsh">
     <topic>Optical character recognition</topic>
   </subject>
-  <relatedItem type="isPartOf">
-    <titleInfo>
-      <title>Digital Grinnell</title>
-    </titleInfo>
-    <identifier type="uri">grinnell-collection:1</identifier>
-  </relatedItem>
-  <relatedItem type="isPartOf">
-    <titleInfo>
-      <title>Faculty Publications</title>
-    </titleInfo>
-  </relatedItem>
-  <identifier type="hdl">http://hdl.handle.net/11084/10470</identifier>
+  
   <identifier type="local">grinnell:10470</identifier>
-  <accessCondition type="useAndReproduction">Copyright to this work is held by the author(s), in accordance with United States copyright law (USC 17). Readers of this work have certain rights as defined by the law, including but not limited to fair use (17 USC 107 et seq.).</accessCondition>
-  <mods:extension>
-    <mods:creators>Chande, Ravi; Gumm, Dylan; Weinman, J. J.</mods:creators>
-    <mods:primarySort>99</mods:primarySort>
-    <mods:CModel>islandora:binaryObjectCModel</mods:CModel>
-  </mods:extension>
+  
 </mods>

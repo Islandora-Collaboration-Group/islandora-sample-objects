@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mods xmlns="http://www.loc.gov/mods/v3" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" version="3.5" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-5.xsd">
+<mods xmlns="http://www.loc.gov/mods/v3" 
+  xmlns:mods="http://www.loc.gov/mods/v3" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:xlink="http://www.w3.org/1999/xlink" version="3.5" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-5.xsd">
   <titleInfo>
     <title>Lawrence Hall Library, 1897</title>
   </titleInfo>
@@ -22,20 +25,12 @@ Lawrence Hall (Williams College) in Berkshire Quad.</abstract>
   <identifier type="filename">Basic_Image_02</identifier>
   <physicalDescription>
     <form authority="marcform">nonprojected graphic</form>
-    <reformattingQuality>access</reformattingQuality>
-    <internetMediaType>jpeg</internetMediaType>
-    <digitalOrigin>digitized other analog</digitalOrigin>
+
   </physicalDescription>
-  <accessCondtion>Contact Archives and Special Collections at archives@williams.edu</accessCondtion>
   <subject>
-    <mods:topic>Williams College</mods:topic>
-    <mods:geographic>Massachusetts--Williamstown</mods:geographic>
+    <topic>Williams College</topic>
+    <geographic>Massachusetts--Williamstown</geographic>
   </subject>
-  <accessCondition type="restrictions on access">Contact Archives and Special Collections at archives@williams.edu</accessCondition>
-  <recordInfo>
-    <languageOfCataloging>
-      <languageTerm type="code" authority="iso639-3">eng</languageTerm>
-    </languageOfCataloging>
-  </recordInfo>
+
   <identifier type="collection">0-538</identifier>
 </mods>

@@ -44,12 +44,9 @@
   </originInfo>
   <typeOfResource>Dataset</typeOfResource>
   <physicalDescription>
-    <digitalOrigin>born digital</digitalOrigin>
     <extent>2 pages</extent>
-    <internetMediaType>pdf</internetMediaType>
   </physicalDescription>
   <language>
-    <languageTerm type="text">English</languageTerm>
     <languageTerm type="code">eng</languageTerm>
   </language>
   <subject authority="lcsh">
@@ -58,28 +55,7 @@
   <subject authority="lcsh">
     <topic>Optical character recognition</topic>
   </subject>
-  <relatedItem type="isPartOf">
-    <titleInfo>
-      <title>Digital Grinnell</title>
-    </titleInfo>
-    <identifier type="uri">grinnell-collection:1</identifier>
-  </relatedItem>
-  <relatedItem type="isPartOf">
-    <titleInfo>
-      <title>Faculty Publications</title>
-    </titleInfo>
-  </relatedItem>
-  <relatedItem type="isPartOf">
-    <titleInfo>
-      <title>Student Publications</title>
-    </titleInfo>
-  </relatedItem>
-  <identifier type="hdl">http://hdl.handle.net/11084/10469</identifier>
+  
   <identifier type="local">grinnell:10469</identifier>
-  <accessCondition type="useAndReproduction">Copyright to this work is held by the author(s), in accordance with United States copyright law (USC 17). Readers of this work have certain rights as defined by the law, including but not limited to fair use (17 USC 107 et seq.).</accessCondition>
-  <mods:extension>
-    <mods:creators>Chande, Ravi &apos;11; Gumm, Dylan &apos;11; Weinman, Jerod J.</mods:creators>
-    <mods:primarySort>99</mods:primarySort>
-    <mods:CModel>islandora:sp_pdf</mods:CModel>
-  </mods:extension>
+  
 </mods>
