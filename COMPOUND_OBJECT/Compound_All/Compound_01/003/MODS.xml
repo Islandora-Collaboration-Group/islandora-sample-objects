@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mods xmlns="http://www.loc.gov/mods/v3" 
+    xmlns:mods="http://www.loc.gov/mods/v3" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <name type="personal">
+        <role>
+            <roleTerm type="text">creator</roleTerm>
+        </role>
+        <namePart>Ley, Jimmy</namePart>
+    </name>
+    <titleInfo>
+        <title>Jimmy Ley to Mr. and Mrs. W. E. Ley - August 7, 1942</title>
+    </titleInfo>
+    <originInfo>
+        <dateCreated>1942</dateCreated>
+        <publisher>Grinnell College</publisher>
+        <dateOther displayLabel="Date Created">1942-08-07</dateOther>
+    </originInfo>
+    <typeOfResource>text</typeOfResource>
+    <genre>letter</genre>
+    <physicalDescription>
+        <digitalOrigin>digitized other analog</digitalOrigin>
+        <extent>page 2</extent>
+        <internetMediaType>image/tiff</internetMediaType>
+    </physicalDescription>
+    <language>
+        <languageTerm type="code">eng</languageTerm>
+    </language>
+ 
+    <identifier type="local">grinnell:11570</identifier>
+
+</mods>
