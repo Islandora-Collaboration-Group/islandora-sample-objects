@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mods xmlns="http://www.loc.gov/mods/v3" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" version="3.5" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-5.xsd">
+<mods xmlns="http://www.loc.gov/mods/v3" 
+  xmlns:mods="http://www.loc.gov/mods/v3" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:xlink="http://www.w3.org/1999/xlink" version="3.5" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-5.xsd">
   <titleInfo>
     <title>All the Things You Are</title>
   </titleInfo>
@@ -11,7 +14,7 @@
   </name>
   <typeOfResource>sound recording-musical</typeOfResource>
   <originInfo>
-    <dateIssued>circa 2009</dateIssued>
+    <dateIssued>2009</dateIssued>
   </originInfo>
   <language>
     <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
@@ -19,20 +22,12 @@
   <abstract>Audio Recording of "All the Things You Are"</abstract>
   <identifier type="collection">Audio_02.mp3</identifier>
   <physicalDescription>
-    <form authority="marccategory">videorecording</form>
-    <reformattingQuality>access</reformattingQuality>
-    <internetMediaType>tiff</internetMediaType>
-    <digitalOrigin>digitized other analog</digitalOrigin>
+    <form authority="marccategory">sound_recording</form>
   </physicalDescription>
-  <accessCondition type="restrictions on access">Contact Archives and Special Collections at archives@williams.edu</accessCondition>
   <subject>
-    <mods:topic>Jazz</mods:topic>
-    <mods:topic>Performance</mods:topic>
-    <mods:topic>Music--Performance</mods:topic>
+    <topic>Jazz</topic>
+    <topic>Performance</topic>
+    <topic>Music--Performance</topic>
   </subject>
-  <recordInfo>
-    <languageOfCataloging>
-      <languageTerm type="code" authority="iso639-3">eng</languageTerm>
-    </languageOfCataloging>
-  </recordInfo>
+
 </mods>

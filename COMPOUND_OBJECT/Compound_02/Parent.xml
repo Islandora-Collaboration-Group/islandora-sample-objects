@@ -1,5 +1,8 @@
-
-<mods xmlns="http://www.loc.gov/mods/v3" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<?xml version="1.0" encoding="UTF-8"?>
+<mods xmlns="http://www.loc.gov/mods/v3" 
+  xmlns:mods="http://www.loc.gov/mods/v3" 
+  xmlns:xlink="http://www.w3.org/1999/xlink" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <name type="personal">
     <namePart>Chande, Ravi &apos;11</namePart>
     <role>
@@ -45,27 +48,7 @@
   <subject authority="lcsh">
     <topic>Optical character recognition</topic>
   </subject>
-  <relatedItem type="isPartOf">
-    <titleInfo>
-      <title>Digital Grinnell</title>
-    </titleInfo>
-  </relatedItem>
-  <relatedItem type="isPartOf">
-    <titleInfo>
-      <title>Faculty Scholarship</title>
-    </titleInfo>
-  </relatedItem>
-  <relatedItem type="isPartOf">
-    <titleInfo>
-      <title>Student Scholarship</title>
-    </titleInfo>
-  </relatedItem>
-  <identifier type="hdl">http://hdl.handle.net/11084/3246</identifier>
+
   <identifier type="local">grinnell:3246</identifier>
-  <accessCondition type="useAndReproduction">Copyright to this work is held by the author(s), in accordance with United States copyright law (USC 17). Readers of this work have certain rights as defined by the law, including but not limited to fair use (17 USC 107 et seq.).</accessCondition>
-  <mods:extension>
-    <mods:creators>Chande, Ravi &apos;11; Gumm, Dylan &apos;11; Weinman, Jerod J.</mods:creators>
-    <mods:primarySort>99</mods:primarySort>
-    <mods:CModel>islandora:compoundCModel</mods:CModel>
-  </mods:extension>
+
 </mods>

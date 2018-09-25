@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mods xmlns="http://www.loc.gov/mods/v3" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" version="3.5" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-5.xsd">
+<mods xmlns="http://www.loc.gov/mods/v3" 
+  xmlns:mods="http://www.loc.gov/mods/v3" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:xlink="http://www.w3.org/1999/xlink" version="3.5" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-5.xsd">
   <titleInfo>
     <title>A Brief History of Acceleration</title>
   </titleInfo>
@@ -21,17 +24,11 @@
   <identifier type="archival">Video_01.mp4</identifier>
   <physicalDescription>
     <form authority="marccategory">videorecording</form>
-    <reformattingQuality>access</reformattingQuality>
-    <internetMediaType>tiff</internetMediaType>
-    <digitalOrigin>digitized other analog</digitalOrigin>
+
   </physicalDescription>
   <accessCondition type="restrictions on access">Contact Archives and Special Collections at archives@williams.edu</accessCondition>
   <subject>
-    <mods:topic>Jazz--Performance</mods:topic>
+    <topic>Jazz--Performance</topic>
   </subject>
-  <recordInfo>
-    <languageOfCataloging>
-      <languageTerm type="code" authority="iso639-3">eng</languageTerm>
-    </languageOfCataloging>
-  </recordInfo>
+ 
 </mods>

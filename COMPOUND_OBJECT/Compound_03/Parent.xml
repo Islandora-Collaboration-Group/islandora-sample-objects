@@ -1,2 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mods xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mods="http://www.loc.gov/mods/v3"><titleInfo><title>Iowa Peace Institute</title></titleInfo><name type="corporate"><namePart>Imagine Grinnell (Grinnell, Iowa)</namePart><role><roleTerm type="text">Supporting host</roleTerm></role></name><abstract>Two images of 917 10th Avenue, in Grinnell, Iowa, which, from 1986 until 2003 housed the Iowa Peace Institute. </abstract><originInfo><publisher>Poweshiek History Preservation Project</publisher></originInfo><physicalDescription><digitalOrigin>digitized other analog</digitalOrigin><extent>2 files</extent><internetMediaType>image/jpeg</internetMediaType></physicalDescription><note type="provenance history">Drake Community Library (Grinnell, Iowa) Archives</note><note>290 of 592 slides from the Imagine Grinnell 2000 collection have been added to the Poweshiek History Preservation Project. A physical copy and TIFF images of all the slides can be found at Drake Community Library Archives in Grinnell, Iowa.</note><language><languageTerm type="text">English</languageTerm><languageTerm type="code" authority="iso639-2b">eng</languageTerm></language><subject authority="lcsh"><geographic>Grinnell (Iowa)</geographic></subject><subject><topic>Grinnell</topic><topic>1980s</topic><topic>2000s</topic><topic>Organizations</topic></subject><relatedItem type="isPartOf"><titleInfo><title>Digital Grinnell</title></titleInfo></relatedItem><accessCondition type="useAndReporoduction">Copyright to this work is held by the author(s), in accordance with United States copyright law (USC 17). Readers of this work have certain rights as defined by the law, including but not limited to fair use (17 USC 107 et seq.).</accessCondition><extension><primarySort>99</primarySort><dg_importSource>2017-11-17T09:58 - https://docs.google.com/spreadsheets/d/1YtuytLteNdNfEBHzfTgfjAfmeq4ATf0xnWY1SNrLpy0 - 10AM!A1:AK139 | 138</dg_importSource><dg_importIndex>494</dg_importIndex></extension></mods>
+<mods xmlns="http://www.loc.gov/mods/v3" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:xlink="http://www.w3.org/1999/xlink" 
+    xmlns:mods="http://www.loc.gov/mods/v3">
+    <titleInfo>
+        <title>Iowa Peace Institute</title>
+    </titleInfo>
+    <name type="corporate">
+        <namePart>Imagine Grinnell (Grinnell, Iowa)</namePart>
+        <role>
+            <roleTerm type="text">Supporting host</roleTerm>
+        </role>
+    </name>
+    <abstract>Two images of 917 10th Avenue, in Grinnell, Iowa, which, from 1986 until 2003 housed the Iowa Peace Institute. </abstract>
+    <originInfo>
+        <publisher>Poweshiek History Preservation Project</publisher>
+    </originInfo>
+    <physicalDescription>
+        <digitalOrigin>digitized other analog</digitalOrigin>
+        <extent>2 files</extent>
+        <internetMediaType>image/jpeg</internetMediaType>
+    </physicalDescription>
+    <note type="provenance history">Drake Community Library (Grinnell, Iowa) Archives</note>
+    <note>290 of 592 slides from the Imagine Grinnell 2000 collection have been added to the Poweshiek History Preservation Project. A physical copy and TIFF images of all the slides can be found at Drake Community Library Archives in Grinnell, Iowa.</note>
+    <language>
+        <languageTerm type="text">English</languageTerm>
+        <languageTerm type="code" authority="iso639-2b">eng</languageTerm>
+    </language>
+    <subject authority="lcsh">
+        <geographic>Grinnell (Iowa)</geographic>
+    </subject>
+    <subject>
+        <topic>Grinnell</topic>
+        <topic>1980s</topic>
+        <topic>2000s</topic>
+        <topic>Organizations</topic>
+    </subject>
+
+</mods>

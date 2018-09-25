@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mods xmlns="http://www.loc.gov/mods/v3" 
+  xmlns:mods="http://www.loc.gov/mods/v3" 
+  xmlns:xlink="http://www.w3.org/1999/xlink" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <abstract>Colgate University Student Newspapers</abstract>
+  <abstract type="Description">Archive of the student newspaper at Colgate University in New York State.</abstract>
+  <language>
+    <languageTerm type="text">eng</languageTerm>
+  </language>
+  <identifier type="lccn">07002554 (Madisonensis), 07002553 (Colgate Madisonensis)</identifier>
+  <subject>
+    <geographic>United States</geographic>
+    <geographic>New York</geographic>
+    <geographic>Madison County</geographic>
+    <geographic>Hamilton</geographic>
+    <topic>Colgate University -- Newspapers</topic>
+    <topic>Hamilton (N.Y.) -- Newspapers</topic>
+  </subject>
+  <originInfo>
+    <dateIssued encoding="w3cdtf">1868-11-7</dateIssued>
+    <publisher>Colgate University</publisher>
+  </originInfo>
+  <titleInfo>
+    <title type="Masthead">The Madisonensis Vol. 1 No. 3</title>
+  </titleInfo>
+  <physicalDescription>
+    <form type="type">Student newspaper</form>
+  </physicalDescription>
+</mods>

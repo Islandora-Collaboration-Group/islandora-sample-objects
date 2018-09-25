@@ -1,5 +1,8 @@
-
-<mods xmlns="http://www.loc.gov/mods/v3" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<?xml version="1.0" encoding="UTF-8"?>
+<mods xmlns="http://www.loc.gov/mods/v3" 
+  xmlns:mods="http://www.loc.gov/mods/v3" 
+  xmlns:xlink="http://www.w3.org/1999/xlink" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <abstract>Colgate University Student Newspapers</abstract>
   <abstract type="Description">Archive of the student newspaper at Colgate University in New York State.</abstract>
   <language>
@@ -19,11 +22,9 @@
     <publisher>Colgate University</publisher>
   </originInfo>
   <titleInfo>
-    <title type="Masthead">The Colgate Maroon Vol. 49 No. 21</title>
     <title>Colgate Maroon</title>
   </titleInfo>
   <physicalDescription>
-    <digitalOrigin>Microfilm</digitalOrigin>
     <form type="type">Student newspaper</form>
   </physicalDescription>
 </mods>

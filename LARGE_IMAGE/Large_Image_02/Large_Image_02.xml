@@ -1,37 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mods:mods xmlns:mods="http://www.loc.gov/mods/v3" xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" version="3.5" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-5.xsd">
-  <mods:titleInfo>
-    <mods:title>A female and male student sit on the Science Quad fence, 1969</mods:title>
-  </mods:titleInfo>
-  <mods:name type="personal">
-    <mods:namePart>Tague, William</mods:namePart>
-    <mods:role>
-      <mods:roleTerm type="text" authority="marcrelator">photographer</mods:roleTerm>
-    </mods:role>
-  </mods:name>
-  <mods:typeOfResource>still image</mods:typeOfResource>
-  <mods:genre>Black and White Photographs</mods:genre>
-  <mods:originInfo>
-    <mods:dateIssued encoding="w3cdtf" keyDate="yes">1969-09</mods:dateIssued>
-  </mods:originInfo>
-  <mods:physicalDescription>
-    <mods:reformattingQuality>preservation</mods:reformattingQuality>
-    <mods:internetMediaType>tiff</mods:internetMediaType>
-    <mods:digitalOrigin>digitized other analog</mods:digitalOrigin>
-  </mods:physicalDescription>
-  <mods:abstract>Anne Forrestel sits with a young man on the fence in Science Quad.</mods:abstract>
-  <mods:subject>
-    <mods:topic>Coeducation</mods:topic>
-    <mods:topic>Williams College</mods:topic>
-  </mods:subject>
-  <mods:identifier type="archival">MC 214 Photograph Collection (general)</mods:identifier>
-  <mods:identifier type="filename">Large_Image_02</mods:identifier>
-  <mods:accessCondition type="restrictions on access">Contact Archives and Special Collections at archives@williams.edu</mods:accessCondition>
-  <mods:recordInfo>
-    <mods:recordContentSource>Anna Leonard</mods:recordContentSource>
-    <mods:languageOfCataloging>
-      <mods:languageTerm type="code" authority="iso639-3">eng</mods:languageTerm>
-    </mods:languageOfCataloging>
-    <mods:descriptionStandard>DACS</mods:descriptionStandard>
-  </mods:recordInfo>
-</mods:mods>
+<mods xmlns:mods="http://www.loc.gov/mods/v3" 
+  xmlns="http://www.loc.gov/mods/v3" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:xlink="http://www.w3.org/1999/xlink" version="3.5" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-5.xsd">
+  <titleInfo>
+    <title>A female and male student sit on the Science Quad fence, 1969</title>
+  </titleInfo>
+  <name type="personal">
+    <namePart>Tague, William</namePart>
+    <role>
+      <roleTerm type="text" authority="marcrelator">photographer</roleTerm>
+    </role>
+  </name>
+  <typeOfResource>still image</typeOfResource>
+  <genre>Black and White Photographs</genre>
+  <originInfo>
+    <dateIssued encoding="w3cdtf" keyDate="yes">1969-09</dateIssued>
+  </originInfo>
+  <physicalDescription>
+    <reformattingQuality>preservation</reformattingQuality>
+    <internetMediaType>tiff</internetMediaType>
+    <digitalOrigin>digitized other analog</digitalOrigin>
+  </physicalDescription>
+  <abstract>Anne Forrestel sits with a young man on the fence in Science Quad.</abstract>
+  <subject>
+    <topic>Coeducation</topic>
+    <topic>Williams College</topic>
+  </subject>
+  <identifier type="archival">MC 214 Photograph Collection (general)</identifier>
+  <identifier type="filename">Large_Image_02</identifier>
+  <accessCondition type="restrictions on access">Contact Archives and Special Collections at archives@williams.edu</accessCondition>
+  <recordInfo>
+    <recordContentSource>Anna Leonard</recordContentSource>
+    <languageOfCataloging>
+      <languageTerm type="code" authority="iso639-3">eng</languageTerm>
+    </languageOfCataloging>
+    <descriptionStandard>DACS</descriptionStandard>
+  </recordInfo>
+</mods>

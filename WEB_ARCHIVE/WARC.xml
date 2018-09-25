@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mods xmlns="http://www.loc.gov/mods/v3" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink"><titleInfo><title>'Retro' Grinnell Web Site</title></titleInfo><abstract>This is a WARC capture of http://retro.grinnell.edu from 03-Aug-2016.</abstract><originInfo><publisher>Grinnell College</publisher></originInfo><relatedItem type="isPartOf"><titleInfo><title>Digital Grinnell</title></titleInfo></relatedItem><typeOfResource>mixed material</typeOfResource><genre>web site</genre><language><languageTerm type="code">eng</languageTerm><languageTerm type="text">English</languageTerm></language><identifier type="local">grinnell:17289</identifier><identifier type="hdl">http://hdl.handle.net/11084/17289</identifier><relatedItem type="admin"><note type="creation/production credits">The following wget command sequence was initiated on 03-August-2016 from an SSH session on DGAdmin in order to capture http://retro.grinnell.edu (before its announced retirement) in WARC format.    &#13;
+<mods xmlns="http://www.loc.gov/mods/v3" 
+  xmlns:mods="http://www.loc.gov/mods/v3" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <titleInfo>
+    <title>Retro Grinnell Web Site</title>
+  </titleInfo>
+  <abstract>This is a WARC capture of http://retro.grinnell.edu from 03-Aug-2016.</abstract>
+  <originInfo>
+    <publisher>Grinnell College</publisher>
+  </originInfo>
+  <relatedItem type="isPartOf">
+    <titleInfo>
+      <title>Digital Grinnell</title>
+    </titleInfo>
+  </relatedItem>
+  <typeOfResource>mixed material</typeOfResource>
+  <genre>web site</genre>
+  <language>
+    <languageTerm type="code">eng</languageTerm>
+    <languageTerm type="text">English</languageTerm>
+  </language>
+  <identifier type="local">grinnell:17289</identifier>
+  <relatedItem type="admin">
+    <note type="creation/production credits">The following wget command sequence was initiated on 03-August-2016 from an SSH session on DGAdmin in order to capture http://retro.grinnell.edu (before its announced retirement) in WARC format.    &#13;
  &#13;
 sudo su &#13;
 cd /tmp &#13;
@@ -8,7 +32,9 @@ export USER_AGENT="Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) &#13;
 export SAVE_HOST="retro.grinnell.edu" &#13;
 export WARC_NAME="retro.grinnell.edu" &#13;
 wget \ -e robots=off --mirror --page-requisites \ --waitretry 5 --timeout 60 &#13;
-  --tries 5 --wait 1 \ --warc-header "operator: Archive Team" --warc-cdx  &#13;
-  --warc-file="$WARC_NAME" \ -U "$USER_AGENT" "$SAVE_HOST" -l1 &#13;
+  --tries 5 --wait 1 \ --warc-header "operator: Archive Team" --warc-cdx  &#13; --warc-file="$WARC_NAME" \ -U "$USER_AGENT" "$SAVE_HOST" -l1 &#13;
  &#13;
-The –l1 option, at the very end of the wget command, ensures that the crawl/retrieve will not traverse too deep into the site structure (one level).</note></relatedItem><extension><primarySort>99</primarySort><creators/></extension><accessCondition type="useAndReproduction">Copyright to this work is held by the author(s), in accordance with United            States copyright law (USC 17). Readers of this work have certain rights as defined by            the law, including but not limited to fair use (17 USC 107 et seq.).</accessCondition></mods>
+The –l1 option, at the very end of the wget command, ensures that the crawl/retrieve will not traverse too deep into the site structure (one level).</note>
+  </relatedItem>
+
+</mods>

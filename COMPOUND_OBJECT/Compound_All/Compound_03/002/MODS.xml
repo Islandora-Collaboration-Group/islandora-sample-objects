@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mods xmlns="http://www.loc.gov/mods/v3" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:xlink="http://www.w3.org/1999/xlink" 
+    xmlns:mods="http://www.loc.gov/mods/v3">
+    <titleInfo>
+        <title>917 10th Avenue in 2004</title>
+    </titleInfo>
+    <name type="corporate">
+        <namePart>Imagine Grinnell (Grinnell, Iowa)</namePart>
+        <role>
+            <roleTerm type="text">Supporting host</roleTerm>
+        </role>
+    </name>
+    <originInfo>
+        <dateCreated>2003</dateCreated>
+    </originInfo>
+    <typeOfResource>still image</typeOfResource>
+    <genre>photogrpah</genre>
+    <physicalDescription>
+        <digitalOrigin>digitized other analog</digitalOrigin>
+        <extent>1 file</extent>
+        <internetMediaType>image/jpeg</internetMediaType>
+    </physicalDescription>
+    <note>290 of 592 slides from the Imagine Grinnell 2000 collection have been added to the Poweshiek History Preservation Project. A physical copy and TIFF images of all the slides can be found at Drake Community Library Archives in Grinnell, Iowa.</note>
+    
+</mods>
