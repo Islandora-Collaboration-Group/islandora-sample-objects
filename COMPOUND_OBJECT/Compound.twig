@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-{# Digital_Grinnell_MODS_Master.twig  Revision 9.0
+{# Digital_Grinnell_MODS_Master.twig  Revision 13
 
 This TWIG template for IMI import is intended to serve as a general-purpose
 starting point for MODS import into Digital Grinnell.
@@ -9,6 +9,17 @@ The canonical copy of this Twig is part of a 4-tab Google Sheet named
 Digital_Grinnell_MODS_Master.  Its address is: https://docs.google.com/spreadsheets/d/1G_pQgKJwtgBZYDAHcMC7dCTOnwexIYGHjarHPFKaAOg
 
 History --------------------
+
+Rev 13
+  Corrected "Private" note handling...now generates /mods/extension/note; added specific Citations (generates note[@type='citation']) column.
+Rev 12
+   Added Notes~Display_Label => note[@type='content'] to accomodate content notes with greater flexibility.
+Rev 11
+   Added Dates_As_Notes => note[@type='creation/production credits'] fields for non-discrete or otherwise invalid 'dates'.
+Rev 10
+  Changed semi-automatic imi_import_source_tracking to simple column heading of import_source.
+Rev 9.1
+  No structural changes.  Multiple tabs eliminated by placing EVERYTHING in Column A with spaces for indent.
 Rev 9.0
   Changed import_index and import_source behavior to use IMI's new imi_import_source_tracking feature and field
 Rev. 8
@@ -43,10 +54,10 @@ self-transform produces.
 Use ----------------------------------------------
 This TWIG generally supports four field syntaxes…
 
-  value                …for simple single-valued fields.  The header on this field should be singular.
-  value~attr              …for a single-valued field with an optional attribute.  The header on this field should be singular but include a ‘~something’ suffix.
-  value1 | value2 | value3        …for simple multi-valued fields.  The header on this field should be plural to indicate that it can be multivalued.
-  valuet1~attr1 | value2 | value3~attr3  …for multi-valued fields with attribute possibilities.  This needs a plural header with a ‘~something’ suffix.
+  value  …for simple single-valued fields.  The header on this field should be singular.
+  value~attr  …for a single-valued field with an optional attribute.  The header on this field should be singular but include a ‘~something’ suffix.
+  value1 | value2 | value3  …for simple multi-valued fields.  The header on this field should be plural to indicate that it can be multivalued.
+  value1~attr1 | value2 | value3~attr3  …for multi-valued fields with attribute possibilities.  This needs a plural header with a ‘~something’ suffix.
 
 In the 2nd and 4th syntaxes a value may exist without an attribute, like ‘value2’ in the
 line above.  When no ~attribute is present a default will be assumed and that
@@ -88,7 +99,8 @@ The corresponding worksheet headers should be ordered and read like this...
 PID, STATUS,  Import_Index,  PARENT,  CMODEL,  SEQUENCE,  OBJ, Title,
 Alternative_Titles,  Personal_Names~Roles,  Corporate_Names~Roles, Abstract,
 Index_Date,  Other_Date~Display_Label,  Date_Issued, Date_Captured,  Publisher,
-Place_Of_Publication,  Public_Notes~Types,  Private_Notes~Types, Keywords,
+Place_Of_Publication,  Dates_As_Notes~Display_Label,
+Public_Notes~Types,  Private_Notes~Types, Citations, Keywords,
 LCSH_Subjects, Subjects_Temporal, Subjects_Geographic, Subjects_Names~Types,
 Coordinate,  Type_of_Resource,  Genre, Extent, Form, MIME_Type, Digital_Origin,
 Language_Names~Codes,  Local_Identifier,  Physical_Location, Shelf_Locator,
@@ -191,6 +203,34 @@ Classifications~authorities, Related_Items~types,  Access_Condition,  Import_Sou
   </originInfo>
 {% endif %}
 
+{# August 2018... Adding Dates_As_Notes~Display_Label to create a place for otherwise invalid date strings.  Implicitly @type='creation/production credits' #}
+{% if  attribute(data, 'dates_as_notes~display_label') %}
+  {% for note in attribute(data, 'dates_as_notes~display_label')|split('|') %}
+    {% if note is not null and note|trim is not empty %}
+      {% if '~' in note %}
+        {% set note_parts = note|split('~',2) %}
+        <note type='creation/production credits' displayLabel='{{ note_parts[1]|trim }}'>{{ note_parts[0]|trim }}</note>
+      {% else %}
+        <note type='creation/production credits'>{{ note|trim }}</note>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{# August 2018... Adding Notes~Display_Label to create a place for notes with greater control over display.  Implicitly @type='content' #}
+{% if  attribute(data, 'notes~display_label') %}
+  {% for note in attribute(data, 'notes~display_label')|split('|') %}
+    {% if note is not null and note|trim is not empty %}
+      {% if '~' in note %}
+        {% set note_parts = note|split('~',2) %}
+        <note type='content' displayLabel='{{ note_parts[1]|trim }}'>{{ note_parts[0]|trim }}</note>
+      {% else %}
+        <note type='content'>{{ note|trim }}</note>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
 {# July 2017... Replacing the simple note1|note2 logic below with support for note1~type1|note2|note3~type3 logic #}
 {% if  attribute(data, 'public_notes~types') %}
   {% for note in attribute(data, 'public_notes~types')|split('|') %}
@@ -205,16 +245,10 @@ Classifications~authorities, Related_Items~types,  Access_Condition,  Import_Sou
   {% endfor %}
 {% endif %}
 
-{# @TODO...This logic needs some attention! #}
-{% if  attribute(data, 'private_notes~types') %}
-  {% for pr_note in attribute(data, 'private_notes~types')|split('|') %}
-    {% if pr_note is not null and pr_note|trim is not empty %}
-      {% if '~' in pr_note %}
-        {% set pr_note_parts = pr_note|split('~',2) %}
-        <note type='{{ pr_note_parts[1]|trim }}'>{{ pr_note_parts[0]|trim }}</note>
-      {% else %}
-        <note>{{ pr_note|trim }}</note>
-      {% endif %}
+{% if attribute(data, 'citations') %}
+  {% for citation in attribute(data, 'citations')|split('|') %}
+    {% if citation is not null and citation|trim is not empty %}
+      <note type='citation'>{{ citation|trim }}</note>
     {% endif %}
   {% endfor %}
 {% endif %}
@@ -394,8 +428,8 @@ Classifications~authorities, Related_Items~types,  Access_Condition,  Import_Sou
 {# The following MODS extension elements may be specific to Digital Grinnell! #}
 <extension>
   <primarySort>99</primarySort>
-  {% if attribute(data, 'imi_import_source_tracking') %}
-    <dg_importSource>{{ data.imi_import_source_tracking }}</dg_importSource>
+  {% if attribute(data, 'import_source') %}
+    <dg_importSource>{{ data.import_source }}</dg_importSource>
   {% endif %}
   {% if attribute(data, 'import_index') %}
     <dg_importIndex>{{ data.import_index }}</dg_importIndex>
@@ -410,8 +444,20 @@ Classifications~authorities, Related_Items~types,  Access_Condition,  Import_Sou
       {% endif %}
     {% endfor %}
   {% endif %}
+  {% if  attribute(data, 'private_notes~types') %}
+    {% for pr_note in attribute(data, 'private_notes~types')|split('|') %}
+      {% if pr_note is not null and pr_note|trim is not empty %}
+        {% if '~' in pr_note %}
+          {% set pr_note_parts = pr_note|split('~',2) %}
+          <note type='{{ pr_note_parts[1]|trim }}'>{{ pr_note_parts[0]|trim }}</note>
+        {% else %}
+          <note>{{ pr_note|trim }}</note>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
 </extension>
 
 </mods>
 {% endautoescape %}
-{% endblock %}
+{% endblock %}                
